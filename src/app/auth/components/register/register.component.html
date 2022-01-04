@@ -1,0 +1,74 @@
+<div class="row m-0 w-100">
+  <div class="col-md-4 offset-4 mt-5" *ngIf="!this.isLogin">
+    <h4>Register</h4>
+    <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+      <div class="form-group">
+        <h6>Username:</h6>
+        <input
+          class="form-control"
+          type="text"
+          name="username"
+          placeholder="Username"
+          ngModel
+        />
+      </div>
+      <h6>Email:</h6>
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="email"
+          name="email"
+          placeholder="Email"
+          ngModel
+        />
+      </div>
+      <div class="form-group">
+        <h6>Password:</h6>
+        <input
+          class="form-control"
+          type="password"
+          name="password"
+          placeholder="Password"
+          ngModel
+        />
+      </div>
+
+      <div class="form-group">
+        <h6>Address:</h6>
+        <input
+          class="form-control"
+          type="text"
+          name="address"
+          placeholder="Enter your Address"
+          ngModel
+        />
+      </div>
+      <div class="form-group">
+        <h6>PIN Code:</h6>
+        <input
+          class="form-control"
+          type="text"
+          name="pin"
+          placeholder="Pincode of your area"
+          ngModel
+        />
+      </div>
+      <div class="form-group">
+        <h6>Mobile No:</h6>
+        <input
+          class="form-control"
+          type="text"
+          name="mobile"
+          placeholder="Your Mobile Number"
+          ngModel
+        />
+      </div>
+
+      <input class="btn btn-outline-info" type="submit" value="Register" />
+    </form>
+  </div>
+
+  <div class="col-md-4 offset-4 mt-5" *ngIf="this.isLogin">
+    <h5>You are logged in</h5>
+  </div>
+</div>
